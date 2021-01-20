@@ -233,7 +233,7 @@ button,
 input,
 select,
 textarea {
-  font-family: inherit;
+  font-family: sans-serif;
   /* 1 */
   font-size: 100%;
   /* 2 */
@@ -666,7 +666,7 @@ a {
 }
 
 a:hover {
-  color: #57C3E9;
+  color: #7b68ee;
 }
 
 .bold {
@@ -707,8 +707,8 @@ form input[type="submit"] {
 header.header div.header__bar.row div.grid-6 a.post {
   padding: 8px 20px;
   font-size: 14px;
-  border: 2px solid #57C3E9;
-  color: #57C3E9;
+  border: 2px solid #7b68ee;
+  color: #7b68ee;
   font-weight: bold;
   text-align: center;
   border-radius: 3px;
@@ -797,7 +797,7 @@ header.header .user_nav span:after {
 }
 
 header.header .user_nav span:hover ul {
-  color: #57C3E9;
+  color: #7b68ee;
   display: block;
 }
 
@@ -931,7 +931,7 @@ div.contents.row div.content_post .more ul.more_list li a {
 }
 
 div.contents.row div.content_post .more ul.more_list li a:hover {
-  background-color: #57C3E9;
+  background-color: #7b68ee;
   color: #fff;
 }
 
@@ -994,7 +994,7 @@ form textarea {
 }
 
 form input[type="submit"] {
-  background-color: #57C3E9;
+  background-color: #7b68ee;
   border-radius: 20px;
   color: #fff;
   border: 0;
@@ -1002,7 +1002,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  background-color: #84d3ef;
+  background-color: #7b68ee;
 }
 
 .container {
@@ -1027,7 +1027,7 @@ form input[type="submit"]:hover {
 }
 
 .comments a {
-  color: #57C3E9;
+  color: #7b68ee;
 }
 
 .comments a:hover {
@@ -1056,4 +1056,100 @@ footer p {
 
 .search-form .search-btn {
   width: 10%;
+}
+
+.exhibition-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.exhibition-contents>.title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.exhibition-contents>.subtitle {
+  font-size: 3vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: #9932cc;
+  font-weight: bold;
+}
+
+.exhibition-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.exhibition-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+
+.exhibition-img-content {
+  position: relative;
+}
+
+.exhibition-img {
+  width: 33vh;
+  height: 47vh;
+}
+
+.exhibition-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.exhibition-name {
+  font-size: 2.5vh;
+  width: 33vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+.exhibition-place {
+  font-size: 2vh;
+  display: flex;
+  justify-content: space-between;
+}
+.exhibition-date {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.district-select { 
+  font-family: "游ゴシック", "YuGothic";
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  color: #666
+}
+
+.category-select { 
+  font-family: "游ゴシック", "YuGothic";
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  color: #666
+}
+
+.click-upload {
+  font-size: 12px;
 }
