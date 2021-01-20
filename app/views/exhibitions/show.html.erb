@@ -1,0 +1,78 @@
+<div class="exhibition-show">
+  <div class="exhibition-box">
+    <h2 class="name">
+      <%= @exhibition.title %>
+    </h2>
+    <div class='exhibition-img-content'>
+      <%= image_tag @exhibition.image ,class:"exhibition-box-img" %>
+    </div>
+    <div class="exhibition-place-box">
+      <span class="exhibition-place">
+        <%= @exhibition.place %>
+      </span>
+      <span class="exhibition-date">
+        <%= @exhibition.date %>
+      </span>
+    </div>
+
+<% if user_signed_in? %>
+  <% if current_user.id == @exhibition.user_id %>
+    <%= link_to 'EDIT INFO', "#", method: :get, class: "exhibition-red-btn" %>
+    <p class='or-text'>or</p>
+    <%= link_to 'DELETE INFO', "#", method: :delete, class:'exhibition-destroy' %>
+  <% end %>
+<% else %>
+  <%= link_to '開催者が展覧会情報を編集するにはログインが必要です', user_session_path, class:'exhibition-need-login' %>
+<% end %>
+
+    <div class="exhibition-explain-box">
+      <span><%= "About the Exhibition" %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-exhibition">詳細・概要</th>
+          <td class="detail-value"><%= @exhibition.description %></td>
+        </tr>
+        <tr>
+          <th class="detail-exhibition">カテゴリー</th>
+          <td class="detail-value"><%= @exhibition.category.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-exhibition">入館料</th>
+          <td class="detail-value"><%= @exhibition.price %></td>
+        </tr>
+        <tr>
+          <th class="detail-exhibition">開催エリア</th>
+          <td class="detail-value"><%= @exhibition.district.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-exhibition">最寄駅</th>
+          <td class="detail-value"><%= @exhibition.station %></td>
+        </tr>
+        <tr>
+          <th class="detail-exhibition">お問い合わせ先</th>
+          <td class="detail-value"><%= auto_link(@exhibition.website, html: { target: '_blank' }) %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="comment-box">
+    <form>
+      <textarea class="comment-text" placeholder="展覧会での体験・感想をこちらにお書きください"></textarea>
+      <p class="comment-warn">
+        展覧会で見たこと、感じたことをぜひシェアしてください。
+        <br>
+        Please share your comments and how you felt about the exhibition.
+      </p>
+      <%= link_to 'SHARE YOUR EXPERIENCE!', "#", class: "comment-btn" %>
+    </form>
+  </div>
+
+  <div class="comment-show">
+    <span class="comment-content">
+        
+    </span>
+  </div>
+</div>
