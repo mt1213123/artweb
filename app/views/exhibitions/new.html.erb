@@ -1,0 +1,30 @@
+<div class="contents row">
+  <div class="container">
+    <h3><b>About the Exhibition</b></h3>
+    <%= form_with(model: @exhibition, local: true) do |form| %>
+      <%= form.text_field :date, placeholder: "開催日程" %>
+      <div class="img-upload">
+      <div class="weight-bold-text">
+        展覧会リーフレット
+        <span class="indispensable">＊必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてアップロード
+        </p>
+        <%= form.file_field :image, id:"exhibition-image" %>
+      </div>
+      <%= image_tag (@exhibition.image) if @exhibition.image.attached? %>
+    </div>
+      <%= form.text_field :title, placeholder: "展覧会名" %>
+      <%= form.text_area :description, placeholder: "詳細・概要", rows: "10" %>
+      <%= form.text_field :price, placeholder: "入館料"%>
+      <%= form.text_field :place, placeholder: "会場名"%>
+      <%= form.collection_select(:district_id, District.all, :id, :name, {}, {class:"district-select"}) %>
+      <%= form.text_field :station, placeholder: "最寄駅"%>
+      <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
+      <%= form.text_field :website, placeholder: "お問い合わせ先"%>
+      <%= form.submit "LET EVERYONE KNOW", formaction: exhibitions_path %>
+    <% end %>
+  </div>
+</div>
