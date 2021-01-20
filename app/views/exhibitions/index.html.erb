@@ -1,0 +1,24 @@
+  <div class='exhibition-contents'>
+    <h2 class='title'>展覧会一覧</h2>
+    <%= link_to 'POST ABOUT YOUR EXHIBITION', new_exhibition_path, class: "subtitle" %>
+    <ul class='exhibition-lists'> 
+
+      <% @exhibition.each do |exhibition| %>
+        <li class='list'>
+          <%= link_to exhibition_path(exhibition.id)  do %> 
+              <div class='exhibition-img-content'>
+                <%= image_tag (exhibition.image), class: "exhibition-img" %>
+              </div>
+              <div class='exhibition-info'>
+                <h3 class='exhibition-name'>
+                  <%= exhibition.title %>
+                </h3>
+                <div class='exhibition-price'>
+                  <span><%= exhibition.price %>円</span>
+                </div>
+              </div> 
+          <% end %>
+        </li>  
+      <% end %>
+    </ul>
+  </div>
