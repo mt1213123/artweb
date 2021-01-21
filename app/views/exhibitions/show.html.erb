@@ -17,7 +17,7 @@
 
 <% if user_signed_in? %>
   <% if current_user.id == @exhibition.user_id %>
-    <%= link_to 'EDIT INFO', "#", method: :get, class: "exhibition-red-btn" %>
+    <%= link_to 'EDIT INFO', edit_exhibition_path, class: "exhibition-red-btn" %>
     <p class='or-text'>or</p>
     <%= link_to 'DELETE INFO', exhibition_path, method: :delete, class:'exhibition-destroy' %>
   <% end %>
