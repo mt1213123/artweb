@@ -1,6 +1,6 @@
 class ExhibitionsController < ApplicationController
   skip_before_action :verify_authenticity_token
-  before_action :authenticate_user!, only: [:new, :create, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :destroy, :edit, :update]
 
   def index
     @exhibition = Exhibition.all
@@ -22,6 +22,22 @@ class ExhibitionsController < ApplicationController
   def show
     @exhibition = Exhibition.find(params[:id])
   end
+
+  def edit
+    @exhibition = Exhibition.find(params[:id])
+    redirect_to root_path unless current_user.id == @exhibition.user_id
+  end
+
+  def update
+    @exhibition = Exhibition.find(params[:id])
+    if current_user.id == @exhibition.user_id
+      @exhibition.update(exhibition_params)
+      redirect_to exhibition_path
+    else
+      render :edit
+    end
+  end
+
 
   def destroy
     @exhibition = Exhibition.find(params[:id])
