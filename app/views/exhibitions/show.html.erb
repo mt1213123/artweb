@@ -19,7 +19,7 @@
   <% if current_user.id == @exhibition.user_id %>
     <%= link_to 'EDIT INFO', "#", method: :get, class: "exhibition-red-btn" %>
     <p class='or-text'>or</p>
-    <%= link_to 'DELETE INFO', "#", method: :delete, class:'exhibition-destroy' %>
+    <%= link_to 'DELETE INFO', exhibition_path, method: :delete, class:'exhibition-destroy' %>
   <% end %>
 <% else %>
   <%= link_to '開催者が展覧会情報を編集するにはログインが必要です', user_session_path, class:'exhibition-need-login' %>
