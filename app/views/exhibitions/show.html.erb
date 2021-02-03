@@ -59,20 +59,29 @@
   </div>
 
   <div class="comment-box">
-    <form>
-      <textarea class="comment-text" placeholder="展覧会での体験・感想をこちらにお書きください"></textarea>
-      <p class="comment-warn">
-        展覧会で見たこと、感じたことをぜひシェアしてください。
-        <br>
-        Please share your comments and how you felt about the exhibition.
-      </p>
-      <%= link_to 'SHARE YOUR EXPERIENCE!', "#", class: "comment-btn" %>
-    </form>
-  </div>
-
-  <div class="comment-show">
-    <span class="comment-content">
-        
-    </span>
+    <div class="container">
+    <% if user_signed_in? %>
+      <%= form_with(model: [@exhibition, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "展覧会での体験・感想をこちらにお書きください", rows: "2", class:"comment-text" %>
+        <p class="comment-warn">
+         展覧会で見たこと、感じたことをぜひシェアしてください。
+          <br>
+          Please share your comments and how you felt about the exhibition.
+        </p>
+        <%= form.submit "SHARE YOUR EXPERIENCE!", class:"comment-btn" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% @comments.each do |comment| %>
+        <p>
+          <%= comment.user.nickname %>
+          <%= comment.text %>
+          <%= l comment.created_at%>
+        </p>
+      <% end %>
+    </div>
   </div>
 </div>
