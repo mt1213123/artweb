@@ -21,6 +21,8 @@ class ExhibitionsController < ApplicationController
 
   def show
     @exhibition = Exhibition.find(params[:id])
+    @comment = Comment.new
+    @comments = @exhibition.comments.includes(:user)
   end
 
   def edit
