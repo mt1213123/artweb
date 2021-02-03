@@ -33,7 +33,7 @@ ArtWeb
 Basic認証: admin
   認証Password: 2222
 
-ID: test@com
+ID: test@mail.com
   Password: abc123
 
 ## 利用方法
