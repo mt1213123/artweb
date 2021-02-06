@@ -80,6 +80,7 @@
           <%= comment.user.nickname %>
           <%= comment.text %>
           <%= l comment.created_at%>
+          <%= link_to 'DELETE', exhibition_comment_path(@exhibition, comment.id), method: :delete %>
         </p>
       <% end %>
     </div>
