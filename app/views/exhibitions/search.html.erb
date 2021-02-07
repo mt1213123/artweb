@@ -1,19 +1,11 @@
- <%= form_with(url: search_exhibitions_path, local: true, method: :get, class: "search-form") do |form| %>
+<%= form_with(url: search_exhibitions_path, local: true, method: :get, class: "search-form") do |form| %>
   <%= form.text_field :keyword, placeholder: "展覧会を検索する", class: "search-input" %>
   <%= form.submit "SEARCH", class: "search-btn" %>
-<% end %> 
-  
-  <div class='exhibition-contents'>
-    <h2 class='title'>展覧会一覧</h2>
-    <%= link_to 'POST ABOUT YOUR EXHIBITION', new_exhibition_path, class: "subtitle" %>
-    <ul class='exhibition-lists'> 
-
-      <% @exhibition.each do |exhibition| %>
+<% end %>
+<div class="contents row">
+  <% @exhibitions.each do |exhibition| %>
         <li class='list'>
           <%= link_to exhibition_path(exhibition.id)  do %> 
-              <div class='exhibition-img-content'>
-                <%= image_tag (exhibition.image), class: "exhibition-img" %>
-              </div>
               <div class='exhibition-info'>
                 <h3 class='exhibition-name'>
                   <%= exhibition.title %>
@@ -27,6 +19,5 @@
               </div> 
           <% end %>
         </li>  
-      <% end %>
-    </ul>
-  </div>
+  <% end %>
+</div>
