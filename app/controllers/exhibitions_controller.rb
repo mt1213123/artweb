@@ -49,6 +49,10 @@ class ExhibitionsController < ApplicationController
       end
   end
 
+  def search
+    @exhibitions = Exhibition.search(params[:keyword])
+  end
+
   private
   def exhibition_params
     params.require(:exhibition).permit(:title, :description, :date, :place, :district_id, :category_id, :station, :price, :website, :image).merge(user_id: current_user.id)

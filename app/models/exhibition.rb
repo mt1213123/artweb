@@ -7,6 +7,14 @@ class Exhibition < ApplicationRecord
   has_many :comments
   has_one_attached :image
 
+  def self.search(search)
+    if search != ""
+      Exhibition.where('title LIKE(?)', "%#{search}%")      
+    else
+      Exhibition.all
+    end
+  end
+
   with_options presence: true do
     validates :image
     validates :title
