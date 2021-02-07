@@ -68,6 +68,9 @@ ID: test@mail.com
   
   
  ### 展覧会情報登録機能
+ [![Image from Gyazo](https://i.gyazo.com/6c26d37dfafd0f4da4f1ee9049d82905.gif)](https://gyazo.com/6c26d37dfafd0f4da4f1ee9049d82905)
+ [![Image from Gyazo](https://i.gyazo.com/0bfb6ad0f67e7fe6088af0d488878122.gif)](https://gyazo.com/0bfb6ad0f67e7fe6088af0d488878122)
+ [![Image from Gyazo](https://i.gyazo.com/f9f62ebeb093c702f67039355c714b9c.gif)](https://gyazo.com/f9f62ebeb093c702f67039355c714b9c)
  ユーザーが展覧会の情報を登録できるようにする。
   #### 詳細
   展覧会名、日時、場所、展覧会の内容、カテゴリー、展覧会ウェブサイト等を入力し、展覧会リーフレットの画像とともに情報の登録ができる。
@@ -77,6 +80,7 @@ ID: test@mail.com
   
   
  ### 展覧会情報一覧機能 
+ [![Image from Gyazo](https://i.gyazo.com/f9f62ebeb093c702f67039355c714b9c.gif)](https://gyazo.com/f9f62ebeb093c702f67039355c714b9c)
  展覧会の概要を一覧で見ることができるようにする。
   #### 詳細
   トップページで開催中の展覧会の概要が画像、展覧会名、場所、日時の情報とともに一覧で表示がされる。
@@ -85,6 +89,7 @@ ID: test@mail.com
   
   
  ### 展覧会情報詳細機能 
+ [![Image from Gyazo](https://i.gyazo.com/d1eb7b0a0bcd62e27b92c961f42971d8.gif)](https://gyazo.com/d1eb7b0a0bcd62e27b92c961f42971d8)
  一覧から詳細な展覧会情報を見ることができるようにする。
   #### 詳細
   展覧会情報登録機能で登録した情報がすべて詳細として閲覧することができる。
@@ -92,7 +97,8 @@ ID: test@mail.com
   トップページの展覧会情報をクリックすると詳細な情報が表示される。登録済みの情報のすべてがここで閲覧可能。このページはユーザー登録やログインがなくても見ることができる。
   
   
- ### 展覧会情報削除機能  
+ ### 展覧会情報削除機能
+ [![Image from Gyazo](https://i.gyazo.com/b1d2818bc513fd36d2c15bea98826b5e.gif)](https://gyazo.com/b1d2818bc513fd36d2c15bea98826b5e)
  すでに登録済みの展覧会情報を削除できるようにする。
   #### 詳細
   一度登録した展覧会情報を詳細ページから削除することができる。
@@ -100,7 +106,9 @@ ID: test@mail.com
   展覧会情報の登録者（開催者）とログインユーザーが一致していれば展覧会情報を削除できるボタンが詳細ページに表示される。ログインしていないユーザー、開催者以外には表示されない。展覧会終了後等に削除してもらうための機能。
   
   
- ### 展覧会情報編集機能  
+ ### 展覧会情報編集機能
+ [![Image from Gyazo](https://i.gyazo.com/71d8f6bf14910c952c59e7e47df4e9bf.gif)](https://gyazo.com/71d8f6bf14910c952c59e7e47df4e9bf)
+ [![Image from Gyazo](https://i.gyazo.com/6bc8748ce3ecd9f8d827d37944841415.gif)](https://gyazo.com/6bc8748ce3ecd9f8d827d37944841415)
  すでに登録済みの展覧会情報を修正できるようにする。
   #### 詳細
   一度登録した展覧会情報を詳細ページから編集することができる。
@@ -108,7 +116,8 @@ ID: test@mail.com
   展覧会情報の登録者（開催者）とログインユーザーが一致していれば展覧会情報を編集できるボタンが詳細ページに表示される。ログインしていないユーザー、開催者以外には表示されない。誤った情報を掲載してしまった際に修正するための機能。
   
   
- ### 展覧会コメント機能  
+ ### 展覧会コメント機能
+ [![Image from Gyazo](https://i.gyazo.com/3987ad678cdfdc4d4d56988f7cfd4760.gif)](https://gyazo.com/3987ad678cdfdc4d4d56988f7cfd4760)
  各展覧会に対してコメントを投稿できるようにする。
   #### 詳細
   展覧会への感想を詳細ページより投稿することができる。
@@ -117,6 +126,7 @@ ID: test@mail.com
   
   
  ### 展覧会コメント削除機能
+ [![Image from Gyazo](https://i.gyazo.com/2bee9473d87614a9403c29a92375607e.gif)](https://gyazo.com/2bee9473d87614a9403c29a92375607e)
  コメントを削除できるようにする。
   #### 詳細
   詳細ページにて投稿したコメントを削除することができる。
@@ -124,7 +134,8 @@ ID: test@mail.com
   ユーザーが投稿したコメントをボタンを押すことで削除する。
   
   
- ### 展覧会検索機能 
+ ### 展覧会検索機能
+ [![Image from Gyazo](https://i.gyazo.com/bfe1c4d65d43a32bc64dacbfdf838c19.gif)](https://gyazo.com/bfe1c4d65d43a32bc64dacbfdf838c19)
  展覧会を検索し絞り込めるようにする。
   #### 詳細
   展覧会を検索し、一覧から絞り込むことができるようにする。
